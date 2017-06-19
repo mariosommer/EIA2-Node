@@ -2,7 +2,7 @@
 	"name" : "NodeTest",
 	"version" : "0.0.1",
 	"description" : "first node test",
-	"author" : "Mario Sommer'",
+	"author" : "Mario Sommer",
 	"main" : "NodeTest.js",
 	"scripts" : {
 		"start" : "node NodeTest.js"
