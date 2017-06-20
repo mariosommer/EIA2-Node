@@ -33,6 +33,8 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     for (key in query)
         _response.write(key + ":" + query[key]);
 
+    _response.write("Hallo " + query["Vorname"] + " danke für deine Bestellung");
+
 
 
     _response.end();
