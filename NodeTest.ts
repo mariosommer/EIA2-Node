@@ -6,7 +6,7 @@ import Url = require("url");
 interface AssocStringString {
     [key: string]: string;
 }
-
+ 
 let port: number = process.env.PORT;
 if (port == undefined)
     port = 8100;
