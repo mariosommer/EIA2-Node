@@ -20,9 +20,14 @@ function handleRequest(_request, _response) {
     var query = Url.parse(_request.url, true).query;
     console.log(query);
     var key;
-    for (key in query)
-        _response.write(key + ":" + query[key]);
-    _response.write("Hallo " + query["Vorname"] + " danke für deine Bestellung");
+    for (key in query) {
+        console.log(key + ":" + query[key]);
+    }
+    _response.write("Hallo " + query["Vorname"] + " danke für deine Bestellung" + "<br>" + "Dein Auswahl:" + "<br>");
+    _response.write("Schoko: " + query["Schoko"] + "<br>");
+    _response.write("Erdbeer: " + query["Erdbeer"] + "<br>");
+    _response.write("Haselnuss: " + query["Haselnuss"] + "<br>");
+    _response.write("Vanille: " + query["Vanille"] + "<br>");
     _response.end();
 }
 //# sourceMappingURL=NodeTest.js.map

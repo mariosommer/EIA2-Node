@@ -30,12 +30,21 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     let query: AssocStringString = Url.parse(_request.url, true).query;
     console.log(query);
     let key: string;
-    for (key in query)
-        _response.write(key + ":" + query[key]);
-
-    _response.write("Hallo " + query["Vorname"] + " danke für deine Bestellung");
-
-
+    
+    for (key in query){
+    
+        console.log(key + ":" + query[key]);
+    /*    _response.write(key + ":" + query[key]);*/
+        }
+    
+    _response.write("Hallo " + query["Vorname"] + " danke für deine Bestellung" + "<br>" + "Dein Auswahl:" + "<br>");
+    
+    _response.write("Schoko: " + query["Schoko"] + "<br>");
+    _response.write("Erdbeer: " + query["Erdbeer"] + "<br>");
+    _response.write("Haselnuss: " + query["Haselnuss"] + "<br>");
+    _response.write("Vanille: " + query["Vanille"]+ "<br>");
+    
+    
 
     _response.end();
 }
