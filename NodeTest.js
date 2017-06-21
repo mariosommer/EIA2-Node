@@ -1,3 +1,11 @@
+/* Aufgabe: Aufgabe 10
+Name: Mario Sommer
+Matrikel: 254785
+Datum: 21.07.2017
+Hiermit versichere ich, dass ich diesen
+Code selbst geschrieben habe. Er wurde
+nicht kopiert und auch nicht diktiert.
+*/
 "use strict";
 console.log("Server starting");
 var Http = require("http");
@@ -23,11 +31,21 @@ function handleRequest(_request, _response) {
     for (key in query) {
         console.log(key + ":" + query[key]);
     }
-    _response.write("Hallo " + query["Vorname"] + " danke für deine Bestellung" + "<br>" + "Dein Auswahl:" + "<br>");
+    _response.write("Hallo " + query["Vorname"] + " danke für deine Bestellung" + "<br>" + "Deine Eisauswahl:" + "<br>");
     _response.write("Schoko: " + query["Schoko"] + "<br>");
     _response.write("Erdbeer: " + query["Erdbeer"] + "<br>");
     _response.write("Haselnuss: " + query["Haselnuss"] + "<br>");
     _response.write("Vanille: " + query["Vanille"] + "<br>");
+    _response.write("Banane: " + query["Banane"] + "<br>");
+    //    _response.write("Deine Toppingauswahl:" + "<br>" + query["Erdbeersoße"] + "<br>");
+    //   
+    //    _response.write(" " + query["Streusel"] + "<br>");
+    //    _response.write(" " + query["Sahne"] + "<br>");
+    //    _response.write(" " + query["Schokosoße"] + "<br>");
+    //    
+    //    _response.write("Deine Toppingsauswahl " + query["toppings2"] + "<br>");
+    _response.write("Deine Behälterauswahl:" + "<br>" + query["container"] + "<br>");
+    _response.write("Die Bestellung geht an:" + "<br>" + query["Vorname"] + " " + query["Name"] + " " + query["Straße"] + " " + query["Postleitzahl"] + " " + query["Ort"] + "<br>");
     _response.end();
 }
 //# sourceMappingURL=NodeTest.js.map
